@@ -1,16 +1,16 @@
+import { Profile } from "components/Profile/Profile";
+import User from './../user';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      гав гав гав
+    <div>
+      <Profile
+          username={User.username}
+          tag={User.tag}
+          location={User.location}
+          avatar={User.avatar}
+          stats={User.stats}
+      />
     </div>
   );
 };
