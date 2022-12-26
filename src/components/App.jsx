@@ -1,5 +1,9 @@
 import { Profile } from "components/Profile/Profile";
 import User from './../user';
+import { Statistics } from "./Statistics/Statistic";
+import Data from "./../data";
+import { TransactionHistory } from "./Transation/TransactionHistory";
+import transactions from "./../transactions";
 
 export const App = () => {
   return (
@@ -11,6 +15,9 @@ export const App = () => {
           avatar={User.avatar}
           stats={User.stats}
       />
+      <Statistics data={Data} />
+
+      <TransactionHistory items={transactions} />
     </div>
   );
 };
