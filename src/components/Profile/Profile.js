@@ -1,37 +1,38 @@
 import PropTypes from 'prop-types';
+import { ProfileInfo, ProfileQuantity, ProfileLabel, ProfileItems, ProfileStats, ProfileImg, ProfileDescription, ProfileName, ProfileTag, ProfileLocation } from './Profile.styled';
 
 
 export const Profile = ({ username, tag, location, avatar, stats }) => { 
     return (
-        <div>
-           <div class="profile">
-                <div class="description">
-                <img
+        
+           <ProfileInfo>
+                <ProfileDescription>
+                <ProfileImg
                         src={avatar}
                         alt="User avatar"
                         class="avatar"
-                />
-                    <p class="name">{username}</p>
-                        <p class="tag">{tag}</p>
-                        <p class="location">{location}</p>
-                 </div>
+                ProfileImg/>
+                    <ProfileName>{username}</ProfileName>
+                        <ProfileTag>@{tag}</ProfileTag>
+                        <ProfileLocation>{location}</ProfileLocation>
+                 </ProfileDescription>
 
-                <ul class="stats">
-                    <li>
-                        <span class="label">Followers</span>
-                        <span class="quantity">{stats.followers}</span>
-                    </li>
-                    <li>
-                        <span class="label">Views</span>
-                        <span class="quantity">{stats.views}</span>
-                    </li>
-                    <li>
-                        <span class="label">Likes</span>
-                        <span class="quantity">{stats.likes}</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
+                <ProfileStats>
+                    <ProfileItems>
+                        <ProfileLabel>Followers</ProfileLabel>
+                        <ProfileQuantity>{stats.followers}</ProfileQuantity>
+                    </ProfileItems>
+                    <ProfileItems>
+                        <ProfileLabel>Views</ProfileLabel>
+                        <ProfileQuantity>{stats.views}</ProfileQuantity>
+                    </ProfileItems>
+                    <ProfileItems>
+                        <ProfileLabel>Likes</ProfileLabel>
+                        <ProfileQuantity>{stats.likes}</ProfileQuantity>
+                    </ProfileItems>
+                </ProfileStats>
+            </ProfileInfo>
+        
     );
 };
 

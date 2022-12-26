@@ -4,6 +4,7 @@ import { Statistics } from "./Statistics/Statistic";
 import Data from "./../data";
 import { TransactionHistory } from "./Transation/TransactionHistory";
 import transactions from "./../transactions";
+import { GlobalStyle } from "./GlobalStyle";
 
 export const App = () => {
   return (
@@ -18,6 +19,7 @@ export const App = () => {
       <Statistics data={Data} />
 
       <TransactionHistory items={transactions} />
+      <GlobalStyle />
     </div>
   );
 };
