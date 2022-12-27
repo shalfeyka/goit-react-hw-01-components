@@ -13,6 +13,9 @@ export const ProfileInfo = styled.div`
     border: 1px solid #000;
     margin-right: 1180px;
     box-shadow: 0px 7px 15px -4px #000000;
+    width: 270px;
+    margin: auto;
+    
 `;
 
 export const ProfileDescription = styled.div `
@@ -21,9 +24,10 @@ export const ProfileDescription = styled.div `
     align-items: center;
     margin-bottom: 14px;
     padding: 14px;
+    margin: auto;
 `;
 export const ProfileImg = styled.img`
-   border-radius: 50%;
+    border-radius: 50%;
     width: 100px;
     margin-bottom: 1px;
     border: 1px solid #000;

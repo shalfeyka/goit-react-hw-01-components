@@ -11,7 +11,7 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
                         src={avatar}
                         alt="User avatar"
                         class="avatar"
-                ProfileImg/>
+                />
                     <ProfileName>{username}</ProfileName>
                         <ProfileTag>@{tag}</ProfileTag>
                         <ProfileLocation>{location}</ProfileLocation>

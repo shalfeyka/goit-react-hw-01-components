@@ -5,6 +5,9 @@ import Data from "./../data";
 import { TransactionHistory } from "./Transation/TransactionHistory";
 import transactions from "./../transactions";
 import { GlobalStyle } from "./GlobalStyle";
+import { FriendList } from "./Friends/FriendList";
+import friends from "./../friends";
+
 
 export const App = () => {
   return (
@@ -17,7 +20,7 @@ export const App = () => {
           stats={User.stats}
       />
       <Statistics data={Data} />
-
+      <FriendList friends={friends}/>
       <TransactionHistory items={transactions} />
       <GlobalStyle />
     </div>
