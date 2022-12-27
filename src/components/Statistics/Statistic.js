@@ -16,4 +16,3 @@ export const Statistics = ({ data }) => {
     );
 };
 
-// пропсы описать

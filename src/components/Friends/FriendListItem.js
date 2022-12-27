@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Item, FriendImg, FriendText } from './FriendListitem.styled';
+import { Item, SocialStatus, FriendImg, FriendText } from './FriendListitem.styled';
 
 // function change() {
 //     if (isOnline === true) {
@@ -10,9 +10,9 @@ import { Item, FriendImg, FriendText } from './FriendListitem.styled';
 
 export const FriendListItem = ({ avatar, name, isOnline }) => {
     return <Item>   
-        <span
+        <SocialStatus
             style={{ backgroundColor: isOnline ? 'green' : 'red' }}>
-        </span>
+        </SocialStatus>
         <FriendImg src={avatar} alt="User avatar" width="48" />
         <FriendText>{name}</FriendText>
     </Item>

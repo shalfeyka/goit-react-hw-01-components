@@ -1,6 +1,6 @@
-// import styled from '@emotion/styled';
+import styled from '@emotion/styled';
 
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
 
 export const Item = styled.li`
@@ -9,9 +9,9 @@ export const Item = styled.li`
     display: flex;
     align-items: center;
     box-shadow: 0px 7px 15px -4px #000000;
-    width: 250px;
     margin-bottom: 10px;
     height: 80px;
+    
 `;
 
 export const FriendImg = styled.img`
@@ -21,4 +21,11 @@ export const FriendImg = styled.img`
 export const FriendText = styled.p`
     margin-left: 2px;
     font-weight: 500;
+`;
+
+export const SocialStatus = styled.span`
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-right: 7px;
 `;
