@@ -1,12 +1,12 @@
 import { Profile } from "components/Profile/Profile";
 import User from './../user';
-import { Statistics } from "./Statistics/Statistic";
 import Data from "./../data";
 import { TransactionHistory } from "./Transation/TransactionHistory";
 import transactions from "./../transactions";
 import { GlobalStyle } from "./GlobalStyle";
 import { FriendList } from "./Friends/FriendList";
 import friends from "./../friends";
+import { Statistics } from "./Statistics/Statistic";
 
 
 export const App = () => {
@@ -19,7 +19,7 @@ export const App = () => {
           avatar={User.avatar}
           stats={User.stats}
       />
-      <Statistics data={Data} />
+      <Statistics title="Upload stats" stats={Data} />
       <FriendList friends={friends}/>
       <TransactionHistory items={transactions} />
       <GlobalStyle />
