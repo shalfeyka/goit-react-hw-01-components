@@ -1,13 +1,12 @@
 import { List, Title, Section, StatisticsItem } from "./Statistics.styled";
 import PropTypes from 'prop-types';
 
-export const Statistics = ({ data }) => {
+export const Statistics = ({ data, title }) => {
     return (
         <Section>
-        {/* <Title>Upload stats</Title>  */}
         {data.title ?
           (<Title>{data.title}</Title>)
-          : (<Title>Upload stats</Title>)
+          : (<Title>{title}</Title>)
         }
                 <List>
                  {data.map( item => 
@@ -21,21 +20,9 @@ export const Statistics = ({ data }) => {
     );
 };
 
-// const Mailbox = ({ username, unreadMessages }) => {
-//   return (
-//     <div>
-//       <h1>Hello {username}</h1>
-//       {unreadMessages.length > 0 ? (
-//         <p>You have {unreadMessages.length} unread messages.</p>
-//       ) : (
-//         <p>No unread messages.</p>
-//       )}
-//     </div>
-//   );
-// };
-
 Statistics.protoTypes = {
-  data: PropTypes.exact({
+    title: PropTypes.string,
+    data: PropTypes.exact({
     id: PropTypes.string,
     label: PropTypes.string,
     percentage: PropTypes.number,
