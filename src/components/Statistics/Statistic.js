@@ -1,10 +1,14 @@
-import { List, Section, StatisticsItem } from "./Statistics.styled";
+import { List, Title, Section, StatisticsItem } from "./Statistics.styled";
 import PropTypes from 'prop-types';
 
 export const Statistics = ({ data }) => {
     return (
         <Section>
-            {/* <Title>Upload stats</Title>  я если честно не могу понять типа это надо удалить))*/}
+        {/* <Title>Upload stats</Title>  */}
+        {data.title > 0 ?
+          (<Title>{data.title}</Title>)
+          : (<Title>Upload stats</Title>)
+        }
                 <List>
                  {data.map( item => 
                     <StatisticsItem key={item.id}>
@@ -17,8 +21,21 @@ export const Statistics = ({ data }) => {
     );
 };
 
+// const Mailbox = ({ username, unreadMessages }) => {
+//   return (
+//     <div>
+//       <h1>Hello {username}</h1>
+//       {unreadMessages.length > 0 ? (
+//         <p>You have {unreadMessages.length} unread messages.</p>
+//       ) : (
+//         <p>No unread messages.</p>
+//       )}
+//     </div>
+//   );
+// };
+
 Statistics.protoTypes = {
-  data: PropTypes.shape({
+  data: PropTypes.exact({
     id: PropTypes.string,
     label: PropTypes.string,
     percentage: PropTypes.number,
