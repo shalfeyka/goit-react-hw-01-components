@@ -5,7 +5,7 @@ export const Statistics = ({ data }) => {
     return (
         <Section>
         {/* <Title>Upload stats</Title>  */}
-        {data.title > 0 ?
+        {data.title ?
           (<Title>{data.title}</Title>)
           : (<Title>Upload stats</Title>)
         }
