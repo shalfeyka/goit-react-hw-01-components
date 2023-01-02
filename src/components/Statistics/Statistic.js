@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 export const Statistics = ({ data, title }) => {
     return (
         <Section>
-        {data.title ?
-          (<Title>{data.title}</Title>)
+        {title ?
+          (<Title>{title}</Title>)
           : (<Title>{title}</Title>)
         }
                 <List>
