@@ -1,13 +1,5 @@
 import styled from 'styled-components';
-// ul {
-//   list-style: none;
-//   padding: 0;
-//   margin: 0;
-// }
 
-// p {
-//   margin: 0;
-// }
 export const ProfileInfo = styled.div`
   background-color: #fff;
   border: 1px solid #000;
